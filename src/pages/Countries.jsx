@@ -28,7 +28,7 @@ export default function Countries() {
 export const countryDetailsLoader = async () => {
     const res = await fetch(`https://restcountries.com/v3.1/all`)
     if (!res.ok) {
-        throw Error (`We where not capable of loading the search`)
+        throw Error (`Error loading countries.`)
     }
     return res.json()
 }

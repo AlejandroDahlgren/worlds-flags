@@ -6,13 +6,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Navbar from "./Navbar";
-import Countries from "../pages/Countries";
+import Countries, {countryDetailsLoader} from "../pages/Countries";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<Navbar />} />
-      <Route path="countries" element={<Countries />} />
+      <Route path="/" element={<Countries />} loader={countryDetailsLoader} />
     </>
   )
 );
