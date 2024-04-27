@@ -5,7 +5,7 @@ export default function Navbar() {
         <div className="Navbar-layout">
                 <nav className="navbar">
                     <h3>The Flag App</h3>
-                    <img src="/assets/logo" alt="" />
+                    <img src="/assets/logo.png" alt="logo" />
                     <button>Dark Mode</button>
                 </nav>
         </div>

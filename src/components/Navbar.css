@@ -1,9 +1,15 @@
+.Navbar-layout {
+    width: 100vh;
+}
+
+
 .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     position: absolute;
     top: 0;
-    width: 100vh;
+    width: 100%;
     background-color: rgb(120, 118, 118);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    
 }
