@@ -9,8 +9,9 @@ const CountryList = ({ countries }) => {
           <Link to={`/country/${country.name.common}`}>
             <h3>{country.name.common}</h3>
           </Link>
+          <p>Population: {country.population} </p>
+          <p>Region: {country.region} </p>
           <p>Capital: {country.capital}</p>
-          {}
         </div>
       ))}
     </div>
