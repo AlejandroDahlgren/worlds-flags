@@ -4,6 +4,7 @@ import CountryList from "../components/CountryList";
 const Home = () => {
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -20,8 +21,17 @@ const Home = () => {
     fetchCountries();
   }, []);
 
+  const filteredCountries = countries.filter(country => country.name.common.toLowerCase().includes(searchQuery.toLowerCase()))
+
   return (
     <div>
+      <div className="search-container">
+        <input 
+          type="text" 
+          placeholder="Search for a country..." 
+          value={searchQuery} 
+          onChange={(e) => setSearchQuery(e.target.value)} />
+      </div>
       {loading ? <p>Laddar...</p> : <CountryList countries={countries} />}
     </div>
   );

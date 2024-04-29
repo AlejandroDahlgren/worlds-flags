@@ -1,5 +1,6 @@
 import React, { useEffect, useState,} from "react";
 import { useParams, Link } from "react-router-dom";
+import './CountryDetails.css'
 
 const CountryDetails = () => {
   const { name } = useParams();
@@ -28,15 +29,17 @@ const CountryDetails = () => {
   const { name: countryName, population, region, capital, languages, currencies } = countryData;
 
   return (
-    <div>
-      <Link to="/">Home</Link>
-      <h2>{countryName.official}</h2>
-      <p>Population: {population}</p>
-      <p>Region: {region}</p>
-      <p>Capital: {capital}</p>
-      <p>Native name: {Object.values(countryName.nativeName)[0].common}</p>
-      <p>Currencies: {currencies[Object.keys(currencies)[0]].name}</p>
-      <p>Languages: {Object.values(languages).join(', ')}</p>
+    <div className="country-container">
+      <Link className="home-link" to="/">Home</Link>
+        <div className="country-details">
+          <h2>{countryName.official}</h2>
+          <p>Population: {population}</p>
+          <p>Region: {region}</p>
+          <p>Capital: {capital}</p>
+          <p>Native name: {Object.values(countryName.nativeName)[0].common}</p>
+          <p>Currencies: {currencies[Object.keys(currencies)[0]].name}</p>
+          <p>Languages: {Object.values(languages).join(', ')}</p>
+          </div>
     </div>
   );
 };
