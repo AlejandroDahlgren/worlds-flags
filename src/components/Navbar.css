@@ -3,9 +3,10 @@ header {
 }
 
 .navbar-container {
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1200px;
+    max-width: 1200px;
     background-color: rgb(62,74,85);
 }
