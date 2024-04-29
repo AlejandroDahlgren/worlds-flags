@@ -8,8 +8,9 @@ const CountryList = ({ countries }) => {
     <div className="country-list">
       {countries.map((country) => (
         <div key={country.name.common} className="country-card">
+          <img className="flags" src={country.flags.png} alt={`Flag of ${country.name.common}`} />
           <Link to={`/country/${country.name.common}`}>
-            <h3>{country.name.common}</h3>
+            <h2 className="country-name">{country.name.common}</h2>
           </Link>
           <p>Population: {country.population} </p>
           <p>Region: {country.region} </p>
