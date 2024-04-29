@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState,} from "react";
+import { useParams, Link } from "react-router-dom";
 
 const CountryDetails = () => {
   const { name } = useParams();
@@ -29,6 +29,7 @@ const CountryDetails = () => {
 
   return (
     <div>
+      <Link to="/">Home</Link>
       <h2>{countryName.official}</h2>
       <p>Population: {population}</p>
       <p>Region: {region}</p>

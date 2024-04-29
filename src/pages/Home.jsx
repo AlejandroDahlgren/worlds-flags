@@ -22,8 +22,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Alla länder</h1>
-      {loading ? <p>Loading...</p> : <CountryList countries={countries} />}
+      {loading ? <p>Laddar...</p> : <CountryList countries={countries} />}
     </div>
   );
 };
