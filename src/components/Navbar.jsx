@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <header className="header">
       <nav className="navbar-container">
-        <h3 className="title">The flag App</h3>
+        <h3 className="title">The Flag App</h3>
         <img className="logo" src={logo} alt="techoverlogo" />
         <button className="Buttom-theme">DARK MODE</button>
       </nav>

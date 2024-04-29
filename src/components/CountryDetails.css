@@ -1,26 +1,25 @@
 .country-container {
-    display: flex;
-    justify-content:left;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: column;
 }
 
 .home-link {
-    margin: auto;
-    color: white;
+  color: white;
 }
 
 .country-details {
-    margin: auto;
-    max-width: 600px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    height: auto;
-    max-width: 100%;
+  border: 2px solid red;
+  margin: auto;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
 }
 
 .country-name {
-    color: white;
+  color: white;
 }
