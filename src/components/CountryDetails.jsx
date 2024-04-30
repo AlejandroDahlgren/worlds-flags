@@ -70,8 +70,8 @@ const CountryDetails = () => {
           <p>Capital: {capital || "N/A"}</p>
           <p>
             Native name:{" "}
-            {countryData.name.native
-              ? Object.values(countryData.name.native).map(
+            {countryData.name.nativeName
+              ? Object.values(countryData.name.nativeName).map(
                   (nativeNames, index) => (
                     <span key={index}>{nativeNames.common}</span>
                   )

@@ -1,0 +1,28 @@
+.search-bar {
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.search-by-region {
+    padding: 20px;
+    margin: 16px;
+    border: solid 1px gray;
+    border-radius: 5px;
+    background-color: rgb(32,44,54);
+    width: 200px;
+    color: white;
+}
+
+.search-by-name {
+    padding: 20px;
+    margin: 16px;
+    border: solid 1px gray;
+    border-radius: 5px;
+    background-color: rgb(32,44,54);
+    width: 500px;
+    color: white;
+}

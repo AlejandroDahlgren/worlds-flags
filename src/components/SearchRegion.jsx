@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import "./SearchRegion.css";
 
 const SearchRegion = ({ countries, setFilteredCountries }) => {
   const [region, setRegion] = useState("all");
@@ -18,46 +19,53 @@ const SearchRegion = ({ countries, setFilteredCountries }) => {
 
   const filterByQueryAndRegion = (query, selectedRegion) => {
     let filtered = countries.filter((country) => {
-      const nameMatches = country.name.common.toLowerCase().includes(query.toLowerCase());
-      const nativeLanguageMatches = country.languages && Object.values(country.languages).some(language =>
-        language.toLowerCase().includes(query.toLowerCase())
-      );
+      const nameMatches = country.name.common
+        .toLowerCase()
+        .includes(query.toLowerCase());
+      const nativeLanguageMatches =
+        country.name.nativeName &&
+        Object.values(country.name.nativeName).some((nativeName) =>
+          nativeName.common.toLowerCase().includes(query.toLowerCase())
+        );
       return nameMatches || nativeLanguageMatches;
     });
-  
+
     if (selectedRegion !== "all") {
       filtered = filtered.filter(
         (country) => country.region === selectedRegion
       );
     }
-  
+
     setFilteredCountries(filtered);
   };
-  
 
   return (
     <div>
-      <form>
-        <select
-          id="region-select"
-          value={region}
-          label="Region"
-          onChange={handleChange}
-        >
-          <option value="all">All</option>
-          <option value="Africa">Africa</option> 
-          <option value="Americas">Americas</option> 
-          <option value="Asia">Asia</option> 
-          <option value="Europe">Europe</option> 
-          <option value="Oceania">Oceania</option> 
-        </select>
-      </form>
-      <input
-        type="text"
-        placeholder="Search..."
-        value={searchQuery}
-        onChange={handleInputChange}
-      />
+      <div className="search-bar">
+        <input
+          className="search-by-name"
+          type="text"
+          placeholder="Search..."
+          value={searchQuery}
+          onChange={handleInputChange}
+        />
+        <form>
+          <select
+            className="search-by-region"
+            id="region-select"
+            value={region}
+            label="Region"
+            onChange={handleChange}
+          >
+            <option value="all">All</option>
+            <option value="Africa">Africa</option>
+            <option value="Americas">Americas</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+        </form>
+      </div>
     </div>
   );
 };
