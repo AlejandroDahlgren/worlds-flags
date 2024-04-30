@@ -68,9 +68,22 @@ const CountryDetails = () => {
           <p>Population: {population || "N/A"}</p>
           <p>Region: {region || "N/A"}</p>
           <p>Capital: {capital || "N/A"}</p>
-          <p>Native name:{" "}{ countryData? countryData.name.nativeName[Object.keys(countryData.name.nativeName)[0]].common : "N/A"}</p>
-          <p>Currencies:{" "}{currencies ? currencies[Object.keys(currencies)[0]].name : "N/A"}</p>
-          <p>Languages:{languages ? Object.values(languages).join(", ") : "N/A"}
+          <p>
+            Native name:{" "}
+            {countryData.name.native
+              ? Object.values(countryData.name.native).map(
+                  (nativeNames, index) => (
+                    <span key={index}>{nativeNames.common}</span>
+                  )
+                )
+              : "N/A"}
+          </p>
+          <p>
+            Currencies:{" "}
+            {currencies ? currencies[Object.keys(currencies)[0]].name : "N/A"}
+          </p>
+          <p>
+            Languages: {languages ? Object.values(languages).join(", ") : "N/A"}
           </p>
         </div>
       </div>

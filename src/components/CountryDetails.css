@@ -16,20 +16,25 @@
   display: flex;
   justify-content:center;
   align-items: center;
+  
 }
 
 .flag-container-single {
   width: 100%;
   width: 100%;
-  height: 350px;
+  height: 70%;
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   overflow: hidden;
+  border-radius: 10px;
+  
+  
 }
 
 .flag {
   width: 600px;
+
 }
 
 .text-container {

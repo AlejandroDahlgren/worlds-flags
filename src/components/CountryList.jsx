@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./CountryList.css";
 import Card from "./Card";
-import SearchBar from "./SearchBar";
 
 const CountryList = ({ countries }) => {
   return (
