@@ -30,11 +30,11 @@ const CountryDetails = () => {
   }, [name]);
 
   if (loading) {
-    return <p>Laddar...</p>;
+    return <p>Loading...</p>;
   }
 
   if (error) {
-    return <p>{error}</p>;
+    return <p>Failed to load country data. Please try again later.</p>;
   }
 
   if (!countryData) {
@@ -55,33 +55,23 @@ const CountryDetails = () => {
       <Link className="home-link" to="/">
         Back home
       </Link>
-      <div className="country-container">
-        <div className="country-details">
-          <div className="flag_container">
-            <img
-              className="flags"
-              src={countryData.flags.png}
-              alt={`Flag of ${countryData.name.common}`}
-            />
-          </div>
-          <div className="text_container">
-            <h2>{countryName.official}</h2>
-            <p>Population: {population || "N/A"}</p>
-            <p>Region: {region || "N/A"}</p>
-            <p>Capital: {capital || "N/A"}</p>
-            <p>
-              Native name:{" "}
-              {countryName.nativeName ? countryName.nativeName.common : "N/A"}
-            </p>
-            <p>
-              Currencies:{" "}
-              {currencies ? currencies[Object.keys(currencies)[0]].name : "N/A"}
-            </p>
-            <p>
-              Languages:{" "}
-              {languages ? Object.values(languages).join(", ") : "N/A"}
-            </p>
-          </div>
+      <div className="country-details">
+        <div className="flag-container-single">
+          <img
+            className="flag"
+            src={countryData.flags.png}
+            alt={`Flag of ${countryData.name.common}`}
+          />
+        </div>
+        <div className="text-container">
+          <h2>{countryName.common}</h2>
+          <p>Population: {population || "N/A"}</p>
+          <p>Region: {region || "N/A"}</p>
+          <p>Capital: {capital || "N/A"}</p>
+          <p>Native name:{" "}{ countryData? countryData.name.nativeName[Object.keys(countryData.name.nativeName)[0]].common : "N/A"}</p>
+          <p>Currencies:{" "}{currencies ? currencies[Object.keys(currencies)[0]].name : "N/A"}</p>
+          <p>Languages:{languages ? Object.values(languages).join(", ") : "N/A"}
+          </p>
         </div>
       </div>
     </div>
