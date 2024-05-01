@@ -41,29 +41,45 @@ const SearchRegion = ({ countries, setFilteredCountries }) => {
 
   return (
     <div>
-      <div className="search-bar">
+      <div className="search-box">
         <input
-          className="search-by-name"
+          className={`search-bar ${searchQuery && "has-content"}`}
           type="text"
-          placeholder="Search..."
           value={searchQuery}
           onChange={handleInputChange}
         />
+        <label className="search-bar-label">Search for a country...</label>
         <form>
-          <select
-            className="search-by-region"
-            id="region-select"
-            value={region}
-            label="Region"
-            onChange={handleChange}
-          >
-            <option value="all">All</option>
-            <option value="Africa">Africa</option>
-            <option value="Americas">Americas</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Oceania">Oceania</option>
-          </select>
+          <div className="region-select-container">
+            <select
+              className={`search-by-region ${
+                region !== "all" && "changed-to-region"
+              }`}
+              id="region-select"
+              value={region}
+              label="Region"
+              onChange={handleChange}
+            >
+              <option className="continent-name" value="all">All
+              </option>
+              <option className="continent-name" value="Africa">
+                Africa
+              </option>
+              <option className="continent-name" value="Americas">
+                Americas
+              </option>
+              <option className="continent-name" value="Asia">
+                Asia
+              </option>
+              <option className="continent-name" value="Europe">
+                Europe
+              </option>
+              <option className="continent-name" value="Oceania">
+                Oceania
+              </option>
+            </select>
+            <label className="region-label">Region</label>
+          </div>
         </form>
       </div>
     </div>

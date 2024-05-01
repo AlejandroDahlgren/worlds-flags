@@ -1,4 +1,6 @@
-.search-bar {
+/*Search box*/
+.search-box {
+    position: relative;
     margin: auto;
     max-width: 1200px;
     display: flex;
@@ -7,22 +9,85 @@
     padding: 15px;
 }
 
-.search-by-region {
+/*search bar*/
+.search-bar {
+    outline: none;
+    position: relative;
     padding: 20px;
     margin: 16px;
     border: solid 1px gray;
     border-radius: 5px;
-    background-color: rgb(32,44,54);
-    width: 200px;
+    background-color: rgb(32, 44, 54);
     color: white;
+    width: 500px;
+    font-size: 14px;
+    
+}
+.search-bar:hover {
+    border: solid 1px white;
+}
+.search-bar-label {
+    position: absolute;
+    top: 50%;
+    left: 52px;
+    color: rgb(176,180,184);
+    transition: all 0.2s ease;
+    transform: translateY(-50%);
+    background-color: rgb(32, 44, 54);
+    font-size: 16px;
 }
 
-.search-by-name {
+.search-bar.has-content:focus + .search-bar-label {
+    top: 30px;
+    left: 50px;
+    font-size: 14px;
+    color: white;
+    background-color: rgb(32, 44, 54);
+}
+
+
+/*Region bar*/
+.region-select-container select {
+    outline: none;
     padding: 20px;
     margin: 16px;
     border: solid 1px gray;
     border-radius: 5px;
-    background-color: rgb(32,44,54);
-    width: 500px;
+    background-color: rgb(32, 44, 54);
     color: white;
+    width: 200px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+    line-height: 30px;
+}
+.region-select-container:hover select, 
+.region-select-container:active select {
+    border: 1px solid white;
+}
+
+
+.region-label {
+    position: absolute;
+    top: 32%;
+    right: 155px;
+    color: rgb(176,180,184);
+    transition: all 0.2s ease;
+    transform: translateY(-32%);
+    background-color: rgb(32, 44, 54);
+    padding: 5px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+/* Region select input with content */
+.region-select-container:active input + .region-label {
+    top: 30px;
+    font-size: 12px;
+    color: white;
+    background-color: rgb(32, 44, 54);
+}
+
+.search-by-region option {
+    font-size: 20px;
 }
