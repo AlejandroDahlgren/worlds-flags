@@ -48,7 +48,7 @@ const SearchRegion = ({ countries, setFilteredCountries }) => {
           value={searchQuery}
           onChange={handleInputChange}
         />
-        <label className="search-bar-label">Search for a country...</label>
+        <span className="search-bar-label">Search for a country..</span>
         <form>
           <div className="region-select-container">
             <select
@@ -57,7 +57,6 @@ const SearchRegion = ({ countries, setFilteredCountries }) => {
               }`}
               id="region-select"
               value={region}
-              label="Region"
               onChange={handleChange}
             >
               <option className="continent-name" value="all">All
@@ -78,7 +77,7 @@ const SearchRegion = ({ countries, setFilteredCountries }) => {
                 Oceania
               </option>
             </select>
-            <label className="region-label">Region</label>
+            <span className="region-label">Region</span>
           </div>
         </form>
       </div>

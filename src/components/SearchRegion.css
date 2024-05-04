@@ -23,26 +23,27 @@
     font-size: 14px;
     
 }
-.search-bar:hover {
-    border: solid 1px white;
-}
 .search-bar-label {
     position: absolute;
     top: 50%;
-    left: 52px;
-    color: rgb(176,180,184);
+    left: 50px;
+    padding: 2px;
     transition: all 0.2s ease;
     transform: translateY(-50%);
-    background-color: rgb(32, 44, 54);
-    font-size: 16px;
+    background-color: rgba(32, 44, 54, 0.2);
+    font-size: 14px;
+    color: white;
 }
-
-.search-bar.has-content:focus + .search-bar-label {
+.search-bar.has-content:valid +.search-bar-label {
     top: 30px;
     left: 50px;
     font-size: 14px;
     color: white;
     background-color: rgb(32, 44, 54);
+    border: white;
+}
+.search-bar:hover {
+    border: 1px solid white;
 }
 
 
@@ -57,37 +58,29 @@
     color: white;
     width: 200px;
     font-size: 14px;
-    outline: none;
-    transition: all 0.2s ease;
-    line-height: 30px;
 }
-.region-select-container:hover select, 
-.region-select-container:active select {
+.region-label {
+    position: absolute;
+    top: 40%;
+    right: 133px;
+    padding-right: 30px;
+    background-color: rgb(32, 44, 54);
+    font-size: 14px;
+    transition: all 0.2s ease;
+    color: white;
+}
+.search-by-region:hover {
     border: 1px solid white;
 }
 
-
-.region-label {
-    position: absolute;
-    top: 32%;
-    right: 155px;
-    color: rgb(176,180,184);
-    transition: all 0.2s ease;
-    transform: translateY(-32%);
-    background-color: rgb(32, 44, 54);
-    padding: 5px;
-    margin: 5px;
-    font-size: 16px;
+.search-by-region:hover + .region-label {
+    top: 13%;
+    padding-right: 2px;
+    right: 161px;
 }
 
-/* Region select input with content */
-.region-select-container:active input + .region-label {
-    top: 30px;
-    font-size: 12px;
-    color: white;
-    background-color: rgb(32, 44, 54);
-}
-
-.search-by-region option {
-    font-size: 20px;
+.search-by-region.changed-to-region ~ .region-label{
+    top: 13%;
+    padding-right: 2px;
+    right: 161px;
 }
