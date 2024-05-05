@@ -23,7 +23,6 @@
 .flag-container {
   width: 100%;
   overflow: hidden;
-  
 }
 .country-card img {
   width: 100%;
@@ -31,7 +30,7 @@
   object-fit: cover;
 }
 
-.text-container {
+.text-container-list {
   height: 50%;
   padding-left: 10px;
   color: white;

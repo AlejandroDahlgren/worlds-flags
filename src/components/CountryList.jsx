@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./CountryList.css";
-import Card from "./Card";
 
 const CountryList = ({ countries }) => {
   return (
@@ -20,7 +19,7 @@ const CountryList = ({ countries }) => {
                   alt={`Flag of ${country.name.common}`}
                 />
               </div>
-              <div className="text-container">
+              <div className="text-container-list">
                 <h3 className="country-name">{country.name.common}</h3>
                 <p>Population: {country.population} </p>
                 <p>Region: {country.region} </p>
