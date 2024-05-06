@@ -3,16 +3,17 @@ import { useParams, Link } from "react-router-dom";
 import "./CountryDetails.css";
 
 const CountryDetails = () => {
-  const { name } = useParams();
+  const { cca3 } = useParams();
   const [countryData, setCountryData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchCountryData = async () => {
+      setLoading(true);
       try {
         const response = await fetch(
-          `https://restcountries.com/v3.1/name/${name}`
+          `https://restcountries.com/v3.1/alpha/${cca3}`
         );
         if (!response.ok) {
           throw new Error("Country not found");
@@ -26,8 +27,9 @@ const CountryDetails = () => {
       }
     };
 
+
     fetchCountryData();
-  }, [name]);
+  }, [cca3]);
 
   if (loading) {
     return <p>Loading...</p>;

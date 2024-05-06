@@ -2,6 +2,7 @@
 .search-box {
   position: relative;
   margin: auto;
+  margin-top: 50px;
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
@@ -14,7 +15,6 @@
   outline: none;
   position: relative;
   padding: 20px;
-  margin: 16px;
   border: solid 1px gray;
   border-radius: 5px;
   background-color: rgb(32, 44, 54);
@@ -25,7 +25,7 @@
 .search-bar-label {
   position: absolute;
   top: 50%;
-  left: 50px;
+  margin-left: 20px;
   padding: 2px;
   transition: all 0.2s ease;
   transform: translateY(-50%);
@@ -34,12 +34,11 @@
   color: white;
 }
 .search-bar.has-content:valid + .search-bar-label {
-  top: 30px;
-  left: 50px;
+  top: 10px;
+  margin-left: 20px;
   font-size: 14px;
   color: rgb(144, 202, 249);
   background-color: rgb(32, 44, 54);
-  border: rgb(144, 202, 249);
 }
 .search-bar:hover {
   border: 1px solid rgb(144, 202, 249);
@@ -49,7 +48,6 @@
 .region-select-container select {
   outline: none;
   padding: 20px;
-  margin: 16px;
   border: solid 1px gray;
   border-radius: 5px;
   background-color: rgb(32, 44, 54);
@@ -60,8 +58,7 @@
 .region-label {
   position: absolute;
   top: 40%;
-  right: 133px;
-  padding-right: 30px;
+  right: 150px;
   background-color: rgb(32, 44, 54);
   font-size: 14px;
   transition: all 0.2s ease;
@@ -72,9 +69,8 @@
 }
 
 .search-by-region:hover + .region-label {
-  top: 13%;
-  padding-right: 2px;
-  right: 161px;
+  top: 1%;
+  right: 150px;
 }
 
 .search-by-region.changed-to-region ~ .region-label {

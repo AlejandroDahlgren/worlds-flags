@@ -10,7 +10,7 @@ function App() {
       <Rootlayout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="country/:name" element={<CountryDetails />} />
+          <Route path="country/:cca3" element={<CountryDetails />} />
         </Routes>
       </Rootlayout>
     </Router>

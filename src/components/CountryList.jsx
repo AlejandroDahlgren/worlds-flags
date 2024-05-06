@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./CountryList.css";
 
+
 const CountryList = ({ countries }) => {
   return (
     <div>
@@ -9,7 +10,7 @@ const CountryList = ({ countries }) => {
         {countries.map((country) => (
           <Link
             key={country.name.common}
-            to={`/country/${country.name.common}`}
+            to={`/country/${country.cca3}`}
             style={{ textDecoration: "none" }}
           >
             <div className="country-card">
