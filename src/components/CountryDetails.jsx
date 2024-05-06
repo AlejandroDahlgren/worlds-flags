@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./CountryDetails.css";
-import {getName} from "country-list"
 
 const CountryDetails = () => {
   const { name } = useParams();
@@ -52,9 +51,6 @@ const CountryDetails = () => {
     borders,
   } = countryData;
 
-  const getCountryFullName = (abbreviation) => {
-    return console.log("Borders:", borders);
-  };
 
 
   return (
@@ -109,7 +105,7 @@ const CountryDetails = () => {
                 borders.map((border, index) => (
                   <Link
                     key={index}
-                    to={`/country/${getCountryFullName(border)}`}
+                    to={`/country/${border}`}
                     style={{ textDecoration: "none" }}
                   >
                     <button>{border}</button>
