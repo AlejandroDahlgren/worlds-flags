@@ -3,9 +3,13 @@
   max-width: 1200px;
   
 }
+
 .home-link-container {
   margin: auto;
   max-width: 1200px;
+  justify-content: start;
+  display: flex;
+  align-items: center;
 }
 
 .home-link-container button {
@@ -13,7 +17,6 @@
   border: none;
   color: white;
   padding: 3px 2px;
-
   display: inline-block;
   font-size: 20px;
   border-radius: 5px;

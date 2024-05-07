@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./CountryDetails.css";
+import arrowleft from "../assets/arrowleft.svg";
 
 const CountryDetails = () => {
   const { cca3 } = useParams();
@@ -10,7 +11,7 @@ const CountryDetails = () => {
 
   useEffect(() => {
     const fetchCountryData = async () => {
-      setLoading(true);
+      setLoading(true); //va fan...
       try {
         const response = await fetch(
           `https://restcountries.com/v3.1/alpha/${cca3}`
@@ -58,8 +59,8 @@ const CountryDetails = () => {
   return (
     <>
       <div className="home-link-container">
-        <button className="">
-          <Link to="/">◄ Back home</Link>
+        <button className="button-back">
+          <Link to="/"><img src={arrowleft} alt="" /> Back home</Link>
         </button>
       </div>
       <div className="single-country-container">

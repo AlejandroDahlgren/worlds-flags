@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "../components/Navbar"
 
-const Rootlayout = ({ children }) => {
+const Rootlayout = ({ children, darkMode, toggleDarkMode }) => {
   return (
-    <div className="root-layout">
-        <Navbar />
+    <div className={darkMode ? "root-layout dark-mode" : "root-layout"}>
+        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <main>{children}</main>
     </div>
   );
