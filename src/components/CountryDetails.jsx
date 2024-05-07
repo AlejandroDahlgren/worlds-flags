@@ -2,16 +2,20 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./CountryDetails.css";
 import arrowleft from "../assets/arrowleft.svg";
+import arrowleftdark from "../assets/arrowleftdark.svg"
 
-const CountryDetails = () => {
+
+
+const CountryDetails = ({darkMode}) => {
   const { cca3 } = useParams();
   const [countryData, setCountryData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  
 
   useEffect(() => {
     const fetchCountryData = async () => {
-      setLoading(true); //va fan...
+      setLoading(true);
       try {
         const response = await fetch(
           `https://restcountries.com/v3.1/alpha/${cca3}`
@@ -54,13 +58,11 @@ const CountryDetails = () => {
     borders,
   } = countryData;
 
-
-
   return (
     <>
       <div className="home-link-container">
-        <button className="button-back">
-          <Link to="/"><img src={arrowleft} alt="" /> Back home</Link>
+        <button className={`button-back ${darkMode && "dark-mode"}`}>
+          <Link to="/"><img src={darkMode ? arrowleftdark : arrowleft} alt="" /> Back home</Link>
         </button>
       </div>
       <div className="single-country-container">

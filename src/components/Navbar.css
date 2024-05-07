@@ -1,6 +1,8 @@
 .header {
     max-width: 100%;
-    background-color: rgb(62,74,85);
+    background-color: var(--header-background);
+    border: 1px solid rgb(62,74,85);
+    box-shadow: 10px;
 }
 .navbar-container {
     margin: auto;
@@ -8,5 +10,8 @@
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    border: rgb(62,74,85);
+}
+
+h3 {
+    color: var(--navbar-container-color);
 }

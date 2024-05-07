@@ -13,7 +13,7 @@
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: rgb(66, 78, 89);
+  background-color: var(--country-card-background);
   border-radius: 4px;
   overflow: hidden;
   position: relative;
@@ -33,7 +33,7 @@
 .text-container-list {
   height: 50%;
   padding-left: 10px;
-  color: white;
+  color: var(--text-container-list-color);
   text-decoration: none;
   line-height: 0.8;
 }
