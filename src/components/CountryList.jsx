@@ -11,7 +11,6 @@ const CountryList = ({ countries }) => {
           <Link
             key={country.name.common}
             to={`/country/${country.cca3}`}
-            style={{ textDecoration: "none" }}
           >
             <div className="country-card">
               <div className="flag-container">
@@ -21,7 +20,7 @@ const CountryList = ({ countries }) => {
                 />
               </div>
               <div className="text-container-list">
-                <h3 className="country-name">{country.name.common}</h3>
+                <h3>{country.name.common}</h3>
                 <p>Population: {country.population} </p>
                 <p>Region: {country.region} </p>
                 <p>Capital: {country.capital}</p>
