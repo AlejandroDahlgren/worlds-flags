@@ -19,17 +19,8 @@
   position: relative;
   margin-bottom: 60px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  color: var(--background-color-light);
 }
-
-.country-card a {
-  text-decoration: none;
-  color: inherit;
-}
-.dark-mode .country-card a {
-  color: black;
-}
-
-
 .flag-container {
   width: 100%;
   overflow: hidden;
@@ -43,6 +34,18 @@
 .text-container-list {
   height: 50%;
   padding-left: 10px;
-  color: var(--text-container-list-color);
   line-height: 0.8;
+  background-color: var(--softer-color-light);
+}
+
+.dark-mode .text-container-list{
+  color: var(--text-color-light);
+}
+
+.skeleton-list {
+  margin: auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

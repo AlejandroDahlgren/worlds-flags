@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./CountryDetails.css";
+import CountryDetailsLoader from "./CountryDetailsLoader";
 import arrowleft from "../assets/arrowleft.svg";
 import arrowleftdark from "../assets/arrowleftdark.svg"
 
@@ -24,8 +25,11 @@ const CountryDetails = ({darkMode}) => {
           throw new Error("Country not found");
         }
         const data = await response.json();
-        setCountryData(data[0]);
-        setLoading(false);
+        setTimeout(() => {
+          setCountryData(data[0]);
+          setLoading(false);
+        },1000);
+        
       } catch (error) {
         setError(error.message);
         setLoading(false);
@@ -37,7 +41,7 @@ const CountryDetails = ({darkMode}) => {
   }, [cca3]);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <CountryDetailsLoader/>
   }
 
   if (error) {

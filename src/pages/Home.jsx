@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import CountryList from "../components/CountryList";
+import CountryListLoader from "../components/CountryListLoader";
 import SearchRegion from "../components/SearchRegion";
+import "../components/CountryList.css"
 
 const Home = () => {
   const [countries, setCountries] = useState([]);
@@ -18,9 +20,11 @@ const Home = () => {
         const sortedData = data.sort((a, b) =>
           a.name.common.localeCompare(b.name.common)
         );
+      setTimeout(() => {
         setCountries(sortedData);
         setFilteredCountries(sortedData);
         setLoading(false);
+      }, 1000);
       } catch (error) {
         console.error("Error fetching countries:", error);
       }
@@ -33,7 +37,7 @@ const Home = () => {
 
 
   return (
-    <div>
+    <div className="scrollbar">
       <div>
         <div>
           <SearchRegion
@@ -43,7 +47,7 @@ const Home = () => {
         </div>
       </div>
       <div>
-        {loading ? <p>Laddar...</p> : <CountryList countries={filteredCountries} />}
+        {loading ? <CountryListLoader /> : <CountryList countries={filteredCountries} />}
       </div>
     </div>
   );

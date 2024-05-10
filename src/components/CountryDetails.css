@@ -81,3 +81,13 @@
 .border-countries p {
   margin: 0;
 }
+
+.skeleton-details {
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 50px;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
