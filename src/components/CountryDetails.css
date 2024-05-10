@@ -1,28 +1,30 @@
 .single-country-container {
   margin: auto;
   max-width: 1200px;
-  
+  padding-bottom: 100%;
 }
 
 .home-link-container {
   margin: auto;
   max-width: 1200px;
-  justify-content: start;
-  display: flex;
-  align-items: center;
 }
 
 .home-link-container button {
   border: none;
-  padding: 3px 2px;
-  display: inline-block;
   font-size: 20px;
-  border-radius: 5px;
   margin-top: 50px;
-  
+  padding-inline: 0px;
 }
+
 .home-link-container button a {
-  text-decoration: none;
+  padding: 2px;
+  color: var(--text-color-dark);
+  background-color: var(--background-color-dark);
+}
+
+.dark-mode .home-link-container button a {
+  color: var(--text-color-light);
+  background-color: var(--background-color-light);
 }
 
 .country-details {
@@ -81,7 +83,7 @@
 .border-countries p {
   margin: 0;
 }
-
+/*CountryDetailsLoader css */
 .skeleton-details {
   border-radius: 10px;
   margin: auto;

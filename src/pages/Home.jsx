@@ -24,7 +24,7 @@ const Home = () => {
         setCountries(sortedData);
         setFilteredCountries(sortedData);
         setLoading(false);
-      }, 1000);
+      }, 500);
       } catch (error) {
         console.error("Error fetching countries:", error);
       }

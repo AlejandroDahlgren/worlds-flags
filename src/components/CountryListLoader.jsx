@@ -7,8 +7,8 @@ const CountryListLoader = () => (
     <ContentLoader
       speed={1}
       width={1200}
-      height={1000}
-      viewBox="0 0 1200px 100%"
+      height={1200}
+      viewBox="0 0 1200 1200"
       backgroundColor="#2b3844"
       foregroundColor="#202c36"
     >
@@ -24,7 +24,6 @@ const CountryListLoader = () => (
       <rect x="307" y="660" rx="5" ry="5" width="280" height="270" />
       <rect x="613" y="660" rx="5" ry="5" width="280" height="270" />
     </ContentLoader> 
-   
   </div>
 );
 

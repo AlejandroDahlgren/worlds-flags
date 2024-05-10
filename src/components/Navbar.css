@@ -17,6 +17,9 @@
     &::-webkit-scrollbar {
       display: none;}
 }
+*{
+  text-decoration: none;
+}
   
   .dark-mode {
     color: var(--text-color-light);

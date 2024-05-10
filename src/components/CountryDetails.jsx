@@ -28,7 +28,7 @@ const CountryDetails = ({darkMode}) => {
         setTimeout(() => {
           setCountryData(data[0]);
           setLoading(false);
-        },1000);
+        },500);
         
       } catch (error) {
         setError(error.message);
@@ -65,8 +65,9 @@ const CountryDetails = ({darkMode}) => {
   return (
     <>
       <div className="home-link-container">
-        <button className={`button-back ${darkMode && "dark-mode"}`}>
-          <Link to="/"><img src={darkMode ? arrowleftdark : arrowleft} alt="" /> Back home</Link>
+        <button>
+          <Link to="/">
+            <img src={darkMode ? arrowleft : arrowleftdark} alt="" /> Back home</Link>
         </button>
       </div>
       <div className="single-country-container">

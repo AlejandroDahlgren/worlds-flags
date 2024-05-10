@@ -59,21 +59,21 @@ const SearchRegion = ({ countries, setFilteredCountries }) => {
               value={region}
               onChange={handleChange}
             >
-              <option className="continent-name" value="all" placeholder="All">All
+              <option className="all-text"  value="all" placeholder="All">All
               </option>
-              <option className="continent-name" value="Africa">
+              <option  value="Africa">
                 Africa
               </option>
-              <option className="continent-name" value="Americas">
+              <option  value="Americas">
                 Americas
               </option>
-              <option className="continent-name" value="Asia">
+              <option  value="Asia">
                 Asia
               </option>
-              <option className="continent-name" value="Europe">
+              <option  value="Europe">
                 Europe
               </option>
-              <option className="continent-name" value="Oceania">
+              <option  value="Oceania">
                 Oceania
               </option>
             </select>

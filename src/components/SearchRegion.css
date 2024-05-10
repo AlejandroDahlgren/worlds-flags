@@ -1,6 +1,4 @@
-:root  
-
-/*Search box*/
+/* Search box */
 .search-box {
   position: relative;
   margin: auto;
@@ -13,7 +11,7 @@
   padding: 15px;
 }
 
-/*search bar*/
+/* Search bar */
 .search-bar {
   outline: none;
   position: relative;
@@ -25,6 +23,12 @@
   width: 500px;
   font-size: 14px;
 }
+.search-bar:hover + .search-bar-label {
+  top: 11px;
+}
+.search-bar:hover {
+  border: 1px solid rgb(144, 202, 249);
+}
 .search-bar-label {
   position: absolute;
   top: 50%;
@@ -33,20 +37,26 @@
   transition: all 0.2s ease;
   transform: translateY(-50%);
   font-size: 14px;
-  color: var(--search-bar-color);
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
 }
+
+.dark-mode .search-bar-label {
+  color: var(--text-color-light);
+  background-color: var(--background-color-light);
+}
+
 .search-bar.has-content:valid + .search-bar-label {
   top: 10px;
   margin-left: 20px;
   font-size: 14px;
-  color: var(--search-bar-color);
-  background-color: var(--search-bar-background);
-}
-.search-bar:hover {
-  border: 1px solid rgb(144, 202, 249);
+  color: var(--text-color-dark);
+  background-color: var(--background-color-dark);
 }
 
-/*Region bar*/
+
+
+/* Region select */
 .region-select-container select {
   outline: none;
   padding: 20px;
@@ -54,8 +64,8 @@
   border-radius: 5px;
   width: 200px;
   font-size: 14px;
-  background-color: var(--background);
-  color: var(--color);
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
 }
 
 .region-label {
@@ -64,22 +74,27 @@
   right: 150px;
   font-size: 14px;
   transition: all 0.2s ease;
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
 }
-.search-by-region {
-  background-color: var(--search-by-region-background);
+.dark-mode .region-label {
+  color: var(--text-color-light);
+  background-color: var(--background-color-light);
+}
+
+
+
+.dark-mode .search-by-region {
+  color: var(--text-color-light);
+  background-color: var(--background-color-light);
 }
 
 .search-by-region:hover {
   border: 1px solid rgb(144, 202, 249);
 }
 
-.search-by-region:hover + .region-label {
+.search-by-region:hover + .region-label,
+.search-by-region.changed-to-region ~ .region-label {
   top: 1%;
   right: 150px;
-}
-
-.search-by-region.changed-to-region ~ .region-label {
-  top: 13%;
-  padding-right: 2px;
-  right: 161px;
 }
