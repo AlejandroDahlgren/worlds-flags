@@ -3,16 +3,13 @@ import { useParams, Link } from "react-router-dom";
 import "./CountryDetails.css";
 import CountryDetailsLoader from "./CountryDetailsLoader";
 import arrowleft from "../assets/arrowleft.svg";
-import arrowleftdark from "../assets/arrowleftdark.svg"
+import arrowleftdark from "../assets/arrowleftdark.svg";
 
-
-
-const CountryDetails = ({darkMode}) => {
+const CountryDetails = ({ darkMode }) => {
   const { cca3 } = useParams();
   const [countryData, setCountryData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  
 
   useEffect(() => {
     const fetchCountryData = async () => {
@@ -28,20 +25,19 @@ const CountryDetails = ({darkMode}) => {
         setTimeout(() => {
           setCountryData(data[0]);
           setLoading(false);
-        },500);
-        
+        }, 2000);
+        window.scrollTo(0, 0);
       } catch (error) {
         setError(error.message);
         setLoading(false);
       }
     };
 
-
     fetchCountryData();
   }, [cca3]);
 
   if (loading) {
-    return <CountryDetailsLoader/>
+    return <CountryDetailsLoader />;
   }
 
   if (error) {
@@ -67,7 +63,8 @@ const CountryDetails = ({darkMode}) => {
       <div className="home-link-container">
         <button>
           <Link to="/">
-            <img src={darkMode ? arrowleft : arrowleftdark} alt="" /> Back home</Link>
+            <img src={darkMode ? arrowleftdark : arrowleft} alt="" /> Back home
+          </Link>
         </button>
       </div>
       <div className="single-country-container">
@@ -87,16 +84,6 @@ const CountryDetails = ({darkMode}) => {
               <p>Population: {population || "N/A"}</p>
               <p>Region: {region || "N/A"}</p>
               <p>Capital: {capital || "N/A"}</p>
-              <p>
-                Native name:{"  "}
-                {countryData.name.nativeName
-                  ? Object.values(countryData.name.nativeName).map(
-                      (nativeNames, index) => (
-                        <span key={index}>{" " + nativeNames.common}</span>
-                      )
-                    )
-                  : "N/A"}
-              </p>
               <p>Top Level Domain: {countryData.tld || "N/A"}</p>
               <p>
                 Currencies:{" "}
@@ -109,15 +96,23 @@ const CountryDetails = ({darkMode}) => {
                 {languages ? Object.values(languages).join(", ") : "N/A"}
               </p>
             </div>
+            <div className="native-name-title">
+              <p>
+                Native name:{"  "}
+                {countryData.name.nativeName
+                  ? Object.values(countryData.name.nativeName).map(
+                      (nativeNames, index) => (
+                        <span key={index}>{" " + nativeNames.common}</span>
+                      )
+                    )
+                  : "N/A"}
+              </p>
+            </div>
             <div className="border-countries">
               <p>Border countries: </p>
               {borders && borders.length > 0 ? (
                 borders.map((border, index) => (
-                  <Link
-                    key={index}
-                    to={`/country/${border}`}
-                    style={{ textDecoration: "none" }}
-                  >
+                  <Link key={index} to={`/country/${border}`}>
                     <button>{border}</button>
                   </Link>
                 ))

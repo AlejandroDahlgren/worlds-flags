@@ -2,16 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./CountryList.css";
 
-
 const CountryList = ({ countries }) => {
   return (
-    <div>
-      <div className="country-list">
-        {countries.map((country) => (
-          <Link
-            key={country.name.common}
-            to={`/country/${country.cca3}`}
-          >
+    <div className="country-list">
+      {countries.map((country) => (
+        <div className="country-card-wrapper" key={country.name.common}>
+          <Link to={`/country/${country.cca3}`}>
             <div className="country-card">
               <div className="flag-container">
                 <img
@@ -27,8 +23,8 @@ const CountryList = ({ countries }) => {
               </div>
             </div>
           </Link>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };
