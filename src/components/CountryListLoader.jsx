@@ -12,17 +12,39 @@ const CountryListLoader = () => (
       backgroundColor="#2b3844"
       foregroundColor="#202c36"
     >
-      <rect x="0" y="0" rx="5" ry="5" width="280" height="270" />
-      <rect x="307" y="0" rx="5" ry="5" width="280" height="270" />
-      <rect x="613" y="0" rx="5" ry="5" width="280" height="270" />
-      <rect x="920" y="0" rx="5" ry="5" width="280" height="270" />
-      <rect x="0" y="330" rx="5" ry="5" width="280" height="270" />
-      <rect x="307" y="330" rx="5" ry="5" width="280" height="270" />
-      <rect x="613" y="330" rx="5" ry="5" width="280" height="270" />
-      <rect x="920" y="330" rx="5" ry="5" width="280" height="270" />
-      <rect x="0" y="660" rx="5" ry="5" width="280" height="270" />
-      <rect x="307" y="660" rx="5" ry="5" width="280" height="270" />
-      <rect x="613" y="660" rx="5" ry="5" width="280" height="270" />
+      <rect x="0" y="0"  width="280" height="134" />
+      <rect x="0" y="136" rx="5" ry="5" width="280" height="134" />
+
+      <rect x="307" y="0"  width="280" height="134" />
+      <rect x="307" y="136" rx="5" ry="5" width="280" height="134" />
+
+      <rect x="613" y="0"  width="280" height="134" />
+      <rect x="613" y="136" rx="5" ry="5" width="280" height="134" />
+
+      <rect x="920" y="0"  width="280" height="134" />
+      <rect x="920" y="136" rx="5" ry="5" width="280" height="134" />
+
+      <rect x="0" y="330"  width="280" height="134" />
+      <rect x="0" y="466" rx="5" ry="5" width="280" height="134" />
+
+      <rect x="307" y="330"  width="280" height="134" />
+      <rect x="307" y="466" rx="5" ry="5" width="280" height="134" />
+
+      <rect x="613" y="330"  width="280" height="134" />
+      <rect x="613" y="466" rx="5" ry="5" width="280" height="134" />
+
+      <rect x="920" y="330"  width="280" height="134" />
+      <rect x="920" y="466" rx="5" ry="5" width="280" height="134" />
+
+      <rect x="0" y="660"  width="280" height="134" />
+      <rect x="0" y="796" rx="5" ry="5" width="280" height="134" />
+
+      <rect x="307" y="660"  width="280" height="134" />
+      <rect x="307" y="796" rx="5" ry="5" width="280" height="134" />
+
+      <rect x="613" y="660"  width="280" height="134" />
+      <rect x="613" y="796" rx="5" ry="5" width="280" height="134" />
+      
     </ContentLoader> 
   </div>
 );

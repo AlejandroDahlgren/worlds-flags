@@ -6,7 +6,7 @@
     --text-color-light: black;
     --background-color-dark: #202c36;
     --text-color-dark: #f2f2f2;
-    --softer-color-dark: #2b3844;
+    --softer-color-dark: #414d58;
 
     background-color: var(--background-color-dark);
     color: var(--text-color-dark);
@@ -46,3 +46,5 @@
     align-items: center;
     max-width: 1200px;
   } 
+
+

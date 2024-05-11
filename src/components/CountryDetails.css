@@ -89,9 +89,10 @@
   width: 100%;
 }
 .border-countries {
+  margin: 0;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -104,8 +105,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: black;
 }
 
 text {
   font-size: 13px;
+  color: white;
+}
+.bct {
+  font-size: 17px;
 }

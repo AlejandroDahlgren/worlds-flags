@@ -25,7 +25,7 @@ const CountryDetails = ({ darkMode }) => {
         setTimeout(() => {
           setCountryData(data[0]);
           setLoading(false);
-        }, 2000);
+        }, 500);
         window.scrollTo(0, 0);
       } catch (error) {
         setError(error.message);

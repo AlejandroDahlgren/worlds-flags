@@ -22,35 +22,37 @@ const CountryDetailsLoader = () => (
       <text x="630" y="210">
         Population:{" "}
       </text>{" "}
-      <rect x="705" y="210" rx="5" ry="5" width="75" height="10" />
+      <rect x="700" y="200" rx="5" ry="5" width="75" height="10" />
       <text x="630" y="240">
         Region:
       </text>{" "}
-      <rect x="705" y="240" rx="5" ry="5" width="75" height="10" />
+      <rect x="680" y="230" rx="5" ry="5" width="75" height="10" />
       <text x="630" y="270">
         Capital
       </text>{" "}
-      <rect x="705" y="270" rx="5" ry="5" width="75" height="10" />
-      <text x="630" y="300">
+      <rect x="680" y="260" rx="5" ry="5" width="75" height="10" />
+      <text x="630" y="305">
         Native Name:
       </text>{" "}
-      <rect x="705" y="300" rx="5" ry="5" width="75" height="10" />
+      <rect x="715" y="295" rx="5" ry="5" width="75" height="10" />
       {/**sidan */}
       <text x="915" y="210">
         Top Level Domain:{""}
       </text>
-      <rect x="1025" y="210" rx="5" ry="5" width="75" height="10" />
+      <rect x="1025" y="200" rx="5" ry="5" width="75" height="10" />
       <text x="915" y="240">
         Currencies:{" "}
       </text>
-      <rect x="915" y="240" rx="5" ry="5" width="75" height="10" />
+      <rect x="990" y="230" rx="5" ry="5" width="75" height="10" />
       <text x="915" y="270">
         Languages:{" "}
       </text>
-      <rect x="915" y="270" rx="5" ry="5" width="75" height="10" />
+      <rect x="990" y="260" rx="5" ry="5" width="75" height="10" />
       {/**border*/}
-      <text x="630" y="370">Border Countries</text>
-      <rect x="890" y="368" rx="5" ry="5" width="150" height="20" />
+      <text x="630" y="375" className="bct">
+        Border Countries:
+      </text>
+      <rect x="920" y="360" rx="5" ry="5" width="150" height="20" />
     </ContentLoader>
   </div>
 );
