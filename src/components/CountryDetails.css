@@ -22,6 +22,10 @@
   background-color: var(--background-color-dark);
 }
 
+.dark-mode .arrow {
+  fill: black;
+}
+
 .dark-mode .home-link-container button a {
   color: var(--text-color-light);
   background-color: var(--background-color-light);
@@ -115,3 +119,4 @@ text {
 .bct {
   font-size: 17px;
 }
+

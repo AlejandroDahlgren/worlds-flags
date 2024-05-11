@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./CountryDetails.css";
 import CountryDetailsLoader from "./CountryDetailsLoader";
-import arrowleft from "../assets/arrowleft.svg";
-import arrowleftdark from "../assets/arrowleftdark.svg";
+import arrowleft from "../assets/arrowleft.svg"
+import arrowleftdark from "../assets/arrowleft.svg"
 
-const CountryDetails = ({ darkMode }) => {
+const CountryDetails = ({ darkMode, toggledarkmode }) => {
+  console.log(darkMode)
   const { cca3 } = useParams();
   const [countryData, setCountryData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -63,7 +64,7 @@ const CountryDetails = ({ darkMode }) => {
       <div className="home-link-container">
         <button>
           <Link to="/">
-            <img src={darkMode ? arrowleftdark : arrowleft} alt="" /> Back home
+            <img className="arrow" src={darkMode ? arrowleft : arrowleftdark} alt="" /> Back home
           </Link>
         </button>
       </div>

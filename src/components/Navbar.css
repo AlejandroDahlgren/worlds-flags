@@ -47,4 +47,14 @@
     max-width: 1200px;
   } 
 
+  .button-themed{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .moon-bordered {
+    width: 12px;
+    height: 12px;
+  }
 
