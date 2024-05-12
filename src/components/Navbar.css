@@ -47,14 +47,29 @@
     max-width: 1200px;
   } 
 
-  .button-themed{
+  .button-box {
+    margin: 0;
+    height: 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    border: none;
+    background-color: var(--softer-color-dark);
+    color: var(--text-color-dark);
   }
 
-  .moon-bordered {
-    width: 12px;
-    height: 12px;
+  .button-box:hover {
+    background-color: #35434e;
+    transition: 0.2ms ease;
   }
 
+
+  .dark-mode .button-box {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+  }
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
