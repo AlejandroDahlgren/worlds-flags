@@ -3,10 +3,8 @@ import { useParams, Link } from "react-router-dom";
 import "./CountryDetails.css";
 import CountryDetailsLoader from "./CountryDetailsLoader";
 import arrowleft from "../assets/arrowleft.svg"
-import arrowleftdark from "../assets/arrowleft.svg"
 
-const CountryDetails = ({ darkMode, toggledarkmode }) => {
-  console.log(darkMode)
+const CountryDetails = () => {
   const { cca3 } = useParams();
   const [countryData, setCountryData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -49,6 +47,8 @@ const CountryDetails = ({ darkMode, toggledarkmode }) => {
     return <p>Country data not found</p>;
   }
 
+ 
+
   const {
     name: countryName,
     population,
@@ -62,9 +62,10 @@ const CountryDetails = ({ darkMode, toggledarkmode }) => {
   return (
     <>
       <div className="home-link-container">
-        <button>
+        <button className="arrow">
+        <img src={arrowleft} alt="arrowback" />
           <Link to="/">
-            <img className="arrow" src={darkMode ? arrowleft : arrowleftdark} alt="" /> Back home
+            Back home
           </Link>
         </button>
       </div>
@@ -109,12 +110,12 @@ const CountryDetails = ({ darkMode, toggledarkmode }) => {
                   : "N/A"}
               </p>
             </div>
-            <div className="border-countries">
-              <p>Border countries: </p>
+            <div className="border-countries-box">
+              <p>Border <br/> countries: </p>
               {borders && borders.length > 0 ? (
                 borders.map((border, index) => (
                   <Link key={index} to={`/country/${border}`}>
-                    <button>{border}</button>
+                    <button className="border-countries">{border}</button>
                   </Link>
                 ))
               ) : (

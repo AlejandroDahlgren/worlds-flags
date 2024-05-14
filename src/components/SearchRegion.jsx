@@ -48,7 +48,7 @@ const SearchRegion = ({ countries, setFilteredCountries }) => {
           value={searchQuery}
           onChange={handleInputChange}
         />
-        <span className="search-bar-label">Search for a country..</span>
+        <span className="search-bar-label">Search for a country...</span>
         <form>
           <div className="region-select-container">
             <select

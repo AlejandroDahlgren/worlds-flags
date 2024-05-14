@@ -2,14 +2,12 @@ import React, { useState, useEffect } from "react";
 import CountryList from "../components/CountryList";
 import CountryListLoader from "../components/CountryListLoader";
 import SearchRegion from "../components/SearchRegion";
-import "../components/CountryList.css"
+import "../components/CountryList.css";
 
 const Home = () => {
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filteredCountries, setFilteredCountries] = useState([]);
-
-
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -20,11 +18,11 @@ const Home = () => {
         const sortedData = data.sort((a, b) =>
           a.name.common.localeCompare(b.name.common)
         );
-      setTimeout(() => {
-        setCountries(sortedData);
-        setFilteredCountries(sortedData);
-        setLoading(false);
-      }, 500);
+        setTimeout(() => {
+          setCountries(sortedData);
+          setFilteredCountries(sortedData);
+          setLoading(false);
+        }, 2000);
       } catch (error) {
         console.error("Error fetching countries:", error);
       }
@@ -32,8 +30,6 @@ const Home = () => {
 
     fetchCountries();
   }, []);
-
-  
 
 
   return (
@@ -46,9 +42,10 @@ const Home = () => {
           />
         </div>
       </div>
-      <div>
-        {loading ? <CountryListLoader /> : <CountryList countries={filteredCountries} />}
-      </div>
+        <div  className="boxOfCountries">
+          {loading ? <CountryListLoader/> : <CountryList countries={filteredCountries} />
+          }
+        </div>
     </div>
   );
 };

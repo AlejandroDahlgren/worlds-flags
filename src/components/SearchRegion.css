@@ -34,6 +34,7 @@
   top: 50%;
   margin-left: 20px;
   padding: 2px;
+  transition: top 0.3s ease;
   transform: translateY(-50%);
   font-size: 14px;
   color: var(--text-color-dark);
@@ -46,11 +47,12 @@
   background-color: var(--background-color-light);
 }
 
-.search-bar.has-content:valid + .search-bar-label {
+.search-bar.has-content:focus + .search-bar-label {
   top: 10px;
   margin-left: 20px;
   font-size: 14px;
 }
+
 
 /* Region select */
 .region-select-container select {
@@ -62,6 +64,7 @@
   font-size: 14px;
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
+  
 }
 
 .region-label {
@@ -70,10 +73,10 @@
   right: 150px;
   font-size: 14px;
   background-color: var(--background-color-dark);
+  transition: top 0.3s ease;
 }
 
-.search-by-region:hover,
-.search-by-region:active {
+.search-by-region:focus {
   border: 1px solid rgb(144, 202, 249);
 }
 
@@ -83,9 +86,71 @@
   background-color: var(--background-color-light);
 }
 
-.search-by-region:hover + .region-label,
+.search-by-region:focus + .region-label,
 .search-by-region.changed-to-region ~ .region-label {
   top: 1%;
   right: 150px;
-  /* Adjust other styles as needed */
+}
+
+@media only screen and (max-width: 1200px) {
+  .search-box {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .search-box {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+@media only screen and (max-width: 900px) {
+
+  /* Search box */
+.search-box {
+  max-width: 400px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+/* Search bar */
+.search-bar {
+  padding-bottom: 20px;
+  width: 300px;
+  font-size: 12px;
+  margin-bottom: 30px;
+  
+}
+.search-bar-label {
+  position: absolute;
+  top: 5px;
+
+}
+
+/* Region select */
+.region-select-container {
+  width: 200px;
+  font-size: 12px;
+}
+
+.region-label {
+  position: absolute;
+  top: 80px;
+  width: 50px;
+  left: 38px;
+}
+
+
+.search-by-region:focus + .region-label,
+.search-by-region.changed-to-region ~ .region-label {
+  top: 87px;
+}
+
+
+
+
 }

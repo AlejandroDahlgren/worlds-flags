@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Rootlayout from "../layouts/Rootlayout";
+import Rootlayout from "../components/Rootlayout";
 import Home from "./Home";
 import CountryDetails from "../components/CountryDetails";
 

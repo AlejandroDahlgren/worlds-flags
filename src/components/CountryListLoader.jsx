@@ -2,51 +2,43 @@ import React from "react";
 import ContentLoader from "react-content-loader";
 import "./CountryList.css";
 
-const CountryListLoader = () => (
-  <div className="skeleton-list">
-    <ContentLoader
-      speed={1}
-      width={1200}
-      height={1200}
-      viewBox="0 0 1200 1200"
-      backgroundColor="#2b3844"
-      foregroundColor="#202c36"
-    >
-      <rect x="0" y="0"  width="280" height="134" />
-      <rect x="0" y="136" rx="5" ry="5" width="280" height="134" />
+const CountryListLoader = () => {
+  const numSkeletons = calculateSkeletons();
 
-      <rect x="307" y="0"  width="280" height="134" />
-      <rect x="307" y="136" rx="5" ry="5" width="280" height="134" />
+  function calculateSkeletons() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 1121) {
+      return 16;
+    } else if (screenWidth >= 1021) {
+      return 12;
+    } else if (screenWidth >= 900) {
+      return 2;
+    }else {
+      return 6;
+    }
+  }
 
-      <rect x="613" y="0"  width="280" height="134" />
-      <rect x="613" y="136" rx="5" ry="5" width="280" height="134" />
-
-      <rect x="920" y="0"  width="280" height="134" />
-      <rect x="920" y="136" rx="5" ry="5" width="280" height="134" />
-
-      <rect x="0" y="330"  width="280" height="134" />
-      <rect x="0" y="466" rx="5" ry="5" width="280" height="134" />
-
-      <rect x="307" y="330"  width="280" height="134" />
-      <rect x="307" y="466" rx="5" ry="5" width="280" height="134" />
-
-      <rect x="613" y="330"  width="280" height="134" />
-      <rect x="613" y="466" rx="5" ry="5" width="280" height="134" />
-
-      <rect x="920" y="330"  width="280" height="134" />
-      <rect x="920" y="466" rx="5" ry="5" width="280" height="134" />
-
-      <rect x="0" y="660"  width="280" height="134" />
-      <rect x="0" y="796" rx="5" ry="5" width="280" height="134" />
-
-      <rect x="307" y="660"  width="280" height="134" />
-      <rect x="307" y="796" rx="5" ry="5" width="280" height="134" />
-
-      <rect x="613" y="660"  width="280" height="134" />
-      <rect x="613" y="796" rx="5" ry="5" width="280" height="134" />
-      
-    </ContentLoader> 
-  </div>
-);
+  return (
+    <div className="skeleton-list">
+      {[...Array(numSkeletons)].map((_, index) => (
+        <ContentLoader
+          key={index}
+          speed={1}
+          width={280}
+          height={270}
+          viewBox={`0 0 280 270`}
+          backgroundColor="#2b3844"
+          foregroundColor="#202c36"
+        >
+          <rect x="0" y="0" rx="8" ry="8" width="280" height="135" />
+          <rect x="10" y="150" rx="8" ry="8" width="160" height="15" />
+          <rect x="10" y="185" rx="8" ry="8" width="160" height="15" />
+          <rect x="10" y="215" rx="8" ry="8" width="150" height="15" />
+          <rect x="10" y="245" rx="8" ry="8" width="150" height="15" />
+        </ContentLoader>
+      ))}
+    </div>
+  );
+};
 
 export default CountryListLoader;

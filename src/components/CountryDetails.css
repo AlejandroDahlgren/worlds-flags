@@ -22,9 +22,7 @@
   background-color: var(--background-color-dark);
 }
 
-.dark-mode .arrow {
-  fill: black;
-}
+
 
 .dark-mode .home-link-container button a {
   color: var(--text-color-light);
@@ -92,13 +90,18 @@
 .native-name-title p {
   width: 100%;
 }
-.border-countries {
-  margin: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+.arrow {
+  background-color: var(--background-color-dark);
 }
+.dark-mode .arrow {
+background-color: var(--text-color-dark);
+}
+
+.arrow line {
+  stroke: red;
+}
+
 
 /*CountryDetailsLoader css */
 .skeleton-details {
@@ -120,3 +123,112 @@ text {
   font-size: 17px;
 }
 
+.border-countries-box {
+  width: 560px;
+  overflow-x: auto;
+  white-space: nowrap;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.border-countries {
+  background-color: var(--softer-color-dark);
+  color: var(--text-color-dark);
+  border-radius: 12px;
+  margin: 4px;
+  border: 0;
+  width: 40px;
+  height: 23px;
+}
+
+@media only screen and (max-width: 1120px) {
+  .home-link-container {
+    margin-left: 20px;
+  }
+  
+  .country-details {
+    flex-direction: column;
+    height: 500px;
+  }
+
+  .flag-container-single {
+    width: 90%;
+    height: 50%;
+    border-radius: 10px;
+  }
+
+  .country-details {
+    height: 700px;
+  }
+
+  .flag {
+    border-radius: 10px;
+  }
+
+  .country-details-text-container {
+    width: 90%;
+    display: flex;
+  }
+  .country-details-title {
+    width: 100%;
+    margin-top: 0px;
+  }
+  .country-details-text {
+    font-size: 14px;
+    height: 200px;
+    display: flex;
+    line-height: 1.7;
+
+  }
+  .country-details p {
+    width: 45%;
+    font-weight: bold;
+  }
+  .native-name-title {
+    font-size: 12px;
+    flex-direction: row;
+    line-height: 0.5;
+    display: flex;
+    justify-content: left;
+    align-items: start;
+  }
+  .native-name-title p {
+    width: 100%;
+  }
+  
+  /*CountryDetailsLoader css */
+  .skeleton-details {
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+  
+  text {
+    font-size: 13px;
+    color: white;
+  }
+  .bct {
+    font-size: 17px;
+  }
+
+  .border-countries-box p {
+    height: 50px;
+    width: 100px;
+    display: inline-block;
+    word-wrap: break-word;
+  }
+
+  .border-countries-box {
+    width: 360px;
+    justify-content: flex-start;
+    
+  }
+}
