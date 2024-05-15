@@ -91,7 +91,7 @@
   }
 
   .button-box {
-    width: 175px;
+    width: 150px;
   }
 
 .icon {
@@ -100,12 +100,19 @@
   padding-right: 10px;
 }
 
+.button-box:hover {
+  background-color: var(--softer-color-dark);
+  transition: none;
+}
+
+.dark-mode .button-box:hover {
+  background-color: var(--background-color-light);
+}
 
 
 }
 
 @media only screen and (max-width: 600px) {
- 
   .logo {
     width: 0;
   }

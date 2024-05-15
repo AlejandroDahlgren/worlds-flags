@@ -6,7 +6,9 @@ import arrowleft from "../assets/arrowleft.svg";
 import arrowleftdark from "../assets/arrowleftdark.svg";
 
 
+
 const CountryDetails = ({darkMode}) => {
+
   const { cca3 } = useParams();
   const [countryData, setCountryData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -59,8 +61,8 @@ const CountryDetails = ({darkMode}) => {
     borders,
   } = countryData;
 
-  const arrowSwitch = darkMode ? arrowleft : arrowleftdark;
-  
+  const arrowSwitch = darkMode ? arrowleftdark : arrowleft;
+
   return (
     <>
       <div className="home-button-box">

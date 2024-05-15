@@ -16,7 +16,7 @@ function App() {
       <Rootlayout darkMode={darkMode} toggleDarkMode={toggleDarkMode}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="country/:cca3" element={<CountryDetails />} />
+          <Route path="country/:cca3" element={<CountryDetails darkMode={darkMode} />} />
         </Routes>
       </Rootlayout>
     </Router>
