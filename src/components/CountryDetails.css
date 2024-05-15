@@ -240,6 +240,8 @@ text {
 
 @media only screen and (max-width: 400px) {
   .skeleton-details {
-    width: 90%;
+    height: 700px;
+    width: 710px;
+    margin-top: 85px;
   }
   }

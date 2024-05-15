@@ -15,7 +15,7 @@ const CountryDetailsLoader = () => (
       {/**backbox*/}
       <rect  x="0" y="0" rx="10" ry="10" width="80" height="30" />
       {/**bigbox */}
-      <rect className="bigbox" x="0" y="90" rx="10" ry="10" width="570" height="288" />
+      <rect className="bigbox" x="0" y="90" rx="15" ry="15" width="570" height="288" />
       {/**texttitle */}
       <rect className="textbox" x="630" y="100" rx="5" ry="5" width="300" height="40" />
       {/**textbox */}
