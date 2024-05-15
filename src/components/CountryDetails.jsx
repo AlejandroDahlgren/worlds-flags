@@ -89,7 +89,7 @@ const CountryDetails = ({darkMode}) => {
               <p>Region: {region || "N/A"}</p>
               <p>Capital: {capital || "N/A"}</p>
               <p>Top Level Domain: {countryData.tld || "N/A"}</p>
-              <p>
+              <p className="currencies-text">
                 Currencies:{" "}
                 {currencies
                   ? currencies[Object.keys(currencies)[0]].name
