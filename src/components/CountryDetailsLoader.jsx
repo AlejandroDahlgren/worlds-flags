@@ -13,46 +13,30 @@ const CountryDetailsLoader = () => (
       foregroundColor="#202c36"
     >
       {/**backbox*/}
-      <rect x="0" y="0" rx="10" ry="10" width="140" height="30" />
+      <rect  x="0" y="0" rx="10" ry="10" width="80" height="30" />
       {/**bigbox */}
-      <rect x="0" y="120" rx="10" ry="10" width="570" height="288" />
+      <rect className="bigbox" x="0" y="90" rx="10" ry="10" width="570" height="288" />
       {/**texttitle */}
-      <rect x="630" y="130" rx="5" ry="5" width="300" height="40" />
+      <rect className="textbox" x="630" y="100" rx="5" ry="5" width="300" height="40" />
       {/**textbox */}
-      <text x="630" y="210">
-        Population:{" "}
-      </text>{" "}
-      <rect x="700" y="200" rx="5" ry="5" width="75" height="10" />
-      <text x="630" y="240">
-        Region:
-      </text>{" "}
-      <rect x="680" y="230" rx="5" ry="5" width="75" height="10" />
-      <text x="630" y="270">
-        Capital
-      </text>{" "}
-      <rect x="680" y="260" rx="5" ry="5" width="75" height="10" />
-      <text x="630" y="305">
-        Native Name:
-      </text>{" "}
-      <rect x="715" y="295" rx="5" ry="5" width="75" height="10" />
+     
+      <rect className="textbox" x="630" y="180" rx="5" ry="5" width="75" height="10" />
+      
+      <rect className="textbox" x="630" y="210" rx="5" ry="5" width="75" height="10" />
+      
+      <rect className="textbox" x="630" y="240" rx="5" ry="5" width="75" height="10" />
+      
+      <rect className="textbox" x="630" y="270" rx="5" ry="5" width="75" height="10" />
       {/**sidan */}
-      <text x="915" y="210">
-        Top Level Domain:{""}
-      </text>
-      <rect x="1025" y="200" rx="5" ry="5" width="75" height="10" />
-      <text x="915" y="240">
-        Currencies:{" "}
-      </text>
-      <rect x="990" y="230" rx="5" ry="5" width="75" height="10" />
-      <text x="915" y="270">
-        Languages:{" "}
-      </text>
-      <rect x="990" y="260" rx="5" ry="5" width="75" height="10" />
+      
+      <rect className="textbox" x="920" y="180" rx="5" ry="5" width="75" height="10" />
+     
+      <rect className="textbox" x="920" y="210" rx="5" ry="5" width="75" height="10" />
+      
+      <rect className="textbox" x="920" y="240" rx="5" ry="5" width="75" height="10" />
       {/**border*/}
-      <text x="630" y="375" className="bct">
-        Border Countries:
-      </text>
-      <rect x="920" y="360" rx="5" ry="5" width="150" height="20" />
+      <rect x="640" y="310" rx="5" ry="5" width="75" height="40" />
+      <rect x="900" y="330" rx="5" ry="5" width="150" height="20" />
     </ContentLoader>
   </div>
 );

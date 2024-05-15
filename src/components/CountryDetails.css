@@ -4,34 +4,40 @@
   padding-bottom: 100vh;
 }
 
-.home-link-container {
+.home-button-box {
   margin: auto;
   max-width: 1200px;
 }
 
-.home-link-container button {
+.home-button {
   border: none;
   font-size: 20px;
-  margin-top: 50px;
-  padding-inline: 0;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.home-link-container button a {
+.home-button {
   padding: 2px;
   color: var(--text-color-dark);
   background-color: var(--background-color-dark);
 }
+.home-button a {
+  color: var(--text-color-dark);
+}
 
+.dark-mode .home-button a{
+  color: var(--text-color-light);
+}
 
-
-.dark-mode .home-link-container button a {
+.dark-mode .home-button {
   color: var(--text-color-light);
   background-color: var(--background-color-light);
 }
 
 .country-details {
   height: 410px;
-  margin-top: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,16 +104,11 @@
 background-color: var(--text-color-dark);
 }
 
-.arrow line {
-  stroke: red;
-}
-
-
 /*CountryDetailsLoader css */
 .skeleton-details {
   border-radius: 10px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 25px;
   max-width: 1200px;
   display: flex;
   justify-content: center;
@@ -144,9 +145,19 @@ text {
   height: 23px;
 }
 
+.dark-mode .border-countries {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  border: 1px solid gray;
+}
+
 @media only screen and (max-width: 1120px) {
   .home-link-container {
     margin-left: 20px;
+  }
+
+  .home-button-box {
+    max-width: 90%;
   }
   
   .country-details {
@@ -158,6 +169,7 @@ text {
     width: 90%;
     height: 50%;
     border-radius: 10px;
+    margin-top: 25px;
   }
 
   .country-details {
@@ -200,21 +212,7 @@ text {
   }
   
   /*CountryDetailsLoader css */
-  .skeleton-details {
-    border-radius: 10px;
-    margin: auto;
-    margin-top: 50px;
-    max-width: 1200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-  }
-  
-  text {
-    font-size: 13px;
-    color: white;
-  }
+
   .bct {
     font-size: 17px;
   }
@@ -231,4 +229,17 @@ text {
     justify-content: flex-start;
     
   }
+
+  .skeleton-details {
+    flex-direction: column;
+    width: 110vh;
+    margin-left: 5%;
+  }
+
 }
+
+@media only screen and (max-width: 400px) {
+  .skeleton-details {
+    width: 90%;
+  }
+  }

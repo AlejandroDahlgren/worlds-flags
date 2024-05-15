@@ -22,7 +22,7 @@ const Home = () => {
           setCountries(sortedData);
           setFilteredCountries(sortedData);
           setLoading(false);
-        }, 2000);
+        }, 500);
       } catch (error) {
         console.error("Error fetching countries:", error);
       }

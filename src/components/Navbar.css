@@ -91,7 +91,7 @@
   }
 
   .button-box {
-    width: 150px;
+    width: 175px;
   }
 
 .icon {
@@ -99,9 +99,13 @@
   height: 30px;
   padding-right: 10px;
 }
+
+
+
 }
 
 @media only screen and (max-width: 600px) {
+ 
   .logo {
     width: 0;
   }
