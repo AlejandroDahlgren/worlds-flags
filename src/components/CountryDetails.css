@@ -92,6 +92,7 @@
   display: flex;
   justify-content: left;
   align-items: start;
+  overflow: hidden;
 }
 .native-name-title p {
   width: 100%;
@@ -206,6 +207,7 @@ text {
     display: flex;
     justify-content: left;
     align-items: start;
+
   }
   .native-name-title p {
     width: 100%;
