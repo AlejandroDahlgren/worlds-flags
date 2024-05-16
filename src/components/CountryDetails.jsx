@@ -5,10 +5,7 @@ import CountryDetailsLoader from "./CountryDetailsLoader";
 import arrowleft from "../assets/arrowleft.svg";
 import arrowleftdark from "../assets/arrowleftdark.svg";
 
-
-
-const CountryDetails = ({darkMode}) => {
-
+const CountryDetails = ({ darkMode }) => {
   const { cca3 } = useParams();
   const [countryData, setCountryData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -66,10 +63,12 @@ const CountryDetails = ({darkMode}) => {
   return (
     <>
       <div className="home-button-box">
-      <button className="home-button">
-        <img src={arrowSwitch} alt="arrowback" />
-        <Link to="/">Back</Link>
-      </button>
+        <button className="home-button">
+          <Link className="button-link" to="/">
+            <img className="arrowback" src={arrowSwitch} alt="arrowback" />
+            <p>Back</p>
+          </Link>
+        </button>
       </div>
       <div className="single-country-container">
         <div className="country-details">
@@ -112,19 +111,21 @@ const CountryDetails = ({darkMode}) => {
                   : "N/A"}
               </p>
             </div>
-            <div className="border-countries-box">
-              <p>
+            <div className="border-info">
+              <h4 className="Border-countries-title">
                 Border <br /> countries:{" "}
-              </p>
-              {borders && borders.length > 0 ? (
-                borders.map((border, index) => (
-                  <Link key={index} to={`/country/${border}`}>
-                    <button className="border-countries">{border}</button>
-                  </Link>
-                ))
-              ) : (
-                <span>N/A</span>
-              )}
+              </h4>
+              <div className="border-countries-box">
+                {borders && borders.length > 0 ? (
+                  borders.map((border, index) => (
+                    <Link key={index} to={`/country/${border}`}>
+                      <button className="border-countries">{border}</button>
+                    </Link>
+                  ))
+                ) : (
+                  <span>N/A</span>
+                )}
+              </div>
             </div>
           </div>
         </div>

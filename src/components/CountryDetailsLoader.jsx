@@ -15,28 +15,28 @@ const CountryDetailsLoader = () => (
       {/**backbox*/}
       <rect  x="0" y="0" rx="10" ry="10" width="80" height="30" />
       {/**bigbox */}
-      <rect className="bigbox" x="0" y="90" rx="15" ry="15" width="570" height="288" />
+      <rect className="bigbox" x="0" y="115" rx="15" ry="15" width="570" height="288" />
       {/**texttitle */}
-      <rect className="textbox" x="630" y="100" rx="5" ry="5" width="300" height="40" />
+      <rect className="textbox" x="630" y="120" rx="5" ry="5" width="300" height="40" />
       {/**textbox */}
      
-      <rect className="textbox" x="630" y="180" rx="5" ry="5" width="75" height="10" />
+      <rect className="textbox" x="630" y="195" rx="5" ry="5" width="75" height="10" />
       
-      <rect className="textbox" x="630" y="210" rx="5" ry="5" width="75" height="10" />
+      <rect className="textbox" x="630" y="230" rx="5" ry="5" width="75" height="10" />
       
-      <rect className="textbox" x="630" y="240" rx="5" ry="5" width="75" height="10" />
+      <rect className="textbox" x="630" y="265" rx="5" ry="5" width="75" height="10" />
       
-      <rect className="textbox" x="630" y="270" rx="5" ry="5" width="75" height="10" />
+      <rect className="textbox" x="630" y="315" rx="5" ry="5" width="75" height="10" />
       {/**sidan */}
       
-      <rect className="textbox" x="920" y="180" rx="5" ry="5" width="75" height="10" />
+      <rect className="textbox" x="920" y="195" rx="5" ry="5" width="75" height="10" />
      
-      <rect className="textbox" x="920" y="210" rx="5" ry="5" width="75" height="10" />
+      <rect className="textbox" x="920" y="230" rx="5" ry="5" width="75" height="10" />
       
-      <rect className="textbox" x="920" y="240" rx="5" ry="5" width="75" height="10" />
+      <rect className="textbox" x="920" y="265" rx="5" ry="5" width="75" height="10" />
       {/**border*/}
-      <rect x="640" y="310" rx="5" ry="5" width="75" height="40" />
-      <rect x="900" y="330" rx="5" ry="5" width="150" height="20" />
+      <rect x="630" y="345" rx="5" ry="5" width="70" height="40" />
+      <rect x="718" y="363" rx="15" ry="15" width="150" height="25" />
     </ContentLoader>
   </div>
 );

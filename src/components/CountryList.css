@@ -3,7 +3,15 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
+  background-color: var(--background-color-dark);
+  margin: auto;
+  width: 100%;
 }
+.dark-mode .country-list {
+  background-color: var(--background-color-light);
+
+}
+
 
 .country-card-wrapper {
   margin-bottom: 60px;
@@ -51,7 +59,6 @@
 .boxOfCountries {
   margin: auto;
   max-width: 1200px;
-  height: 100vh;
 }
 
 .skeleton-list {

@@ -1,75 +1,66 @@
 :root {
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
 
-    --background-color-light: #f2f2f2;
-    --text-color-light: black;
-    --background-color-dark: #202c36;
-    --text-color-dark: #f2f2f2;
-    --softer-color-dark: #414d58;
-
-    background-color: var(--background-color-dark);
-    color: var(--text-color-dark);
-
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    &::-webkit-scrollbar {
-      display: none;}
+  --background-color-light: #f2f2f2;
+  --text-color-light: black;
+  --background-color-dark: #202c36;
+  --text-color-dark: #f2f2f2;
+  --softer-color-dark: #414d58;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
 }
-*{
+.dark-mode {
+  color: var(--text-color-light);
+  background-color: var(--background-color-light);
+}
+* {
   text-decoration: none;
 }
-  
-  .dark-mode {
-    color: var(--text-color-light);
-    background-color: var(--background-color-light);
-  }
-  
-  body {
-    margin: auto;
-  }
-  
-  .header {
-    background-color: var(--softer-color-dark);
-    max-width: 100%;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-    margin: auto;
-  }
-  .dark-mode .header {
-    background-color: var(--background-color-light);
-  }
-  
-  .navbar-container {
 
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-  } 
-
-  .button-box {
-    margin: 0;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background-color: var(--softer-color-dark);
-    color: var(--text-color-dark);
-  }
-
-  .button-box:hover {
-    background-color: #35434e;
-    transition: 0.2ms ease;
-  }
+body {
+  margin: 0;
+  padding: 0;  
+}
 
 
-  .dark-mode .button-box {
-    background-color: var(--background-color-light);
-    color: var(--text-color-light);
-  }
+
+.header {
+  background-color: var(--softer-color-dark);
+  max-width: 100%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  margin: auto;
+}
+.dark-mode .header {
+  background-color: var(--background-color-light);
+}
+
+.navbar-container {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.button-box {
+  margin: 0;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--softer-color-dark);
+  color: var(--text-color-dark);
+}
+
+.dark-mode .button-box {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
 
 .icon {
   width: 20px;
@@ -83,8 +74,7 @@
 
   .navbar-container {
     max-width: 100%;
-  } 
-
+  }
 
   h3 {
     padding: 10px;
@@ -94,31 +84,28 @@
     width: 150px;
   }
 
-.icon {
-  width: 30px;
-  height: 30px;
-  padding-right: 10px;
-}
+  .icon {
+    width: 30px;
+    height: 30px;
+    padding-right: 10px;
+  }
 
-.button-box:hover {
-  background-color: var(--softer-color-dark);
-  transition: none;
-}
+  .button-box:hover {
+    background-color: var(--softer-color-dark);
+    transition: none;
+  }
 
-.dark-mode .button-box:hover {
-  background-color: var(--background-color-light);
-}
-
-
+  .dark-mode .button-box:hover {
+    background-color: var(--background-color-light);
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .logo {
     width: 0;
   }
-  
+
   * {
     margin: 0;
   }
-
 }

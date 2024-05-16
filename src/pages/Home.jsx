@@ -22,7 +22,7 @@ const Home = () => {
           setCountries(sortedData);
           setFilteredCountries(sortedData);
           setLoading(false);
-        }, 500);
+        }, 1000);
       } catch (error) {
         console.error("Error fetching countries:", error);
       }
@@ -33,7 +33,7 @@ const Home = () => {
 
 
   return (
-    <div className="scrollbar">
+    <div>
       <div>
         <div>
           <SearchRegion
