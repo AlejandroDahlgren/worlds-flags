@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Rootlayout from "../components/Rootlayout";
+import RootLayout from "../components/RootLayout";
 import Home from "./Home";
 import CountryDetails from "../components/CountryDetails";
 
@@ -13,12 +13,12 @@ function App() {
 
   return (
     <Router>
-      <Rootlayout darkMode={darkMode} toggleDarkMode={toggleDarkMode}>
+      <RootLayout darkMode={darkMode} toggleDarkMode={toggleDarkMode}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="country/:cca3" element={<CountryDetails darkMode={darkMode} />} />
         </Routes>
-      </Rootlayout>
+      </RootLayout>
     </Router>
   );
 }
