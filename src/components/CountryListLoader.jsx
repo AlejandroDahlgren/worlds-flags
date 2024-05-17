@@ -24,13 +24,13 @@ const CountryListLoader = () => {
         <ContentLoader
           key={index}
           speed={1}
-          width={280}
-          height={270}
-          viewBox={`0 0 280 270`}
+          width={290}
+          height={280}
+          viewBox={`0 0 290 280`}
           backgroundColor="#2b3844"
           foregroundColor="#202c36"
         >
-          <rect x="0" y="0" rx="8" ry="8" width="280" height="135" />
+          <rect x="0" y="0" rx="8" ry="8" width="290" height="135" />
           <rect x="10" y="150" rx="8" ry="8" width="160" height="15" />
           <rect x="10" y="185" rx="8" ry="8" width="160" height="15" />
           <rect x="10" y="215" rx="8" ry="8" width="150" height="15" />
