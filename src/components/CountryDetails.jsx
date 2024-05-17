@@ -12,6 +12,7 @@ const CountryDetails = ({ darkMode }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    const isMounted = true;
     const fetchCountryData = async () => {
       setLoading(true);
       try {
@@ -23,13 +24,17 @@ const CountryDetails = ({ darkMode }) => {
         }
         const data = await response.json();
         setTimeout(() => {
-          setCountryData(data[0]);
-          setLoading(false);
+          if (isMounted) {
+            setCountryData(data[0]);
+            setLoading(false);
+          }
         }, 1000);
         window.scrollTo(0, 0);
       } catch (error) {
-        setError(error.message);
-        setLoading(false);
+        if (isMounted) {
+          setError(error.message);
+          setLoading(false);
+        }
       }
     };
 
