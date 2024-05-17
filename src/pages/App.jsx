@@ -21,5 +21,5 @@ function App() {
       </RootLayout>
     </Router>
   );
-}
+} 
 export default App;
