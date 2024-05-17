@@ -16,7 +16,7 @@ const CountryDetails = ({ darkMode }) => {
       setLoading(true);
       try {
         const response = await fetch(
-          `https://restcountries.com/v3.1/all/${cca3}`
+          `https://restcountries.com/v3.1/alpha/${cca3}`
         );
         if (!response.ok) {
           throw new Error("Country not found");
